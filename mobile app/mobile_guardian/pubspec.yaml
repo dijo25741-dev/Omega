@@ -1,0 +1,35 @@
+name: mobile_guardian
+description: Omega Mobile Guardian — External Human Trust Authenticator for critical OT infrastructure.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # HTTP client for API calls
+  http: ^1.2.1
+
+  # Animations
+  flutter_animate: ^4.5.0
+
+  # Icons
+  cupertino_icons: ^1.0.8
+
+  # Shared preferences for storing backend URL
+  shared_preferences: ^2.3.2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  # Uncomment if you add custom assets:
+  # assets:
+  #   - assets/images/

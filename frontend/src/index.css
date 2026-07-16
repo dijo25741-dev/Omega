@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-family: 'Courier New', Courier, monospace, ui-monospace, system-ui;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars for industrial look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Tank liquid level animation */
+@keyframes wave-animation {
+  0% { transform: translateY(0) scaleY(1); }
+  50% { transform: translateY(-2px) scaleY(1.02); }
+  100% { transform: translateY(0) scaleY(1); }
+}
+
+.liquid-wave {
+  animation: wave-animation 3s ease-in-out infinite;
+}
+
+/* Glow effects for bright mode */
+.glow-green {
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
+.glow-yellow {
+  box-shadow: 0 0 12px rgba(234, 179, 8, 0.4);
+}
+.glow-orange {
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.4);
+}
+.glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+  animation: pulse-glow 1.5s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 6px rgba(239, 68, 68, 0.2); }
+  100% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.6); }
+}

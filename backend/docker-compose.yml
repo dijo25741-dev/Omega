@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  omega-backend:
+    build: .
+    container_name: omega_intelligence_core
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always

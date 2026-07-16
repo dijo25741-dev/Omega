@@ -1,0 +1,2 @@
+TPM Key Signature baseline = 0x88ff99
+Root Pin = 1234
